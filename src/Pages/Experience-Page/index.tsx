@@ -149,7 +149,6 @@ export default function Experience() {
                 {[
                   "React.js",
                   "TypeScript",
-                  "Next.js",
                   "Tailwind CSS",
                   "API Integration",
                 ].map((skill) => (

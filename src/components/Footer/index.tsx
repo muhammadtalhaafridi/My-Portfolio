@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, ChevronUp } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 const Footer: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -45,7 +45,6 @@ const Footer: React.FC = () => {
                 href: "talhaafridi739@gmail.com",
                 label: "Email",
               },
-              { icon: <FaTwitter size={20} />, href: "#", label: "Twitter" },
             ].map((social, index) => (
               <motion.a
                 key={index}
