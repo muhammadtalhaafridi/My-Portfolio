@@ -65,30 +65,28 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Start Loading
     setIsSubmitting(true);
 
-    // Clear old success message
-    setSuccessMessage("");
+    const whatsappNumber = "+923336257886"; // Your WhatsApp number with country code
 
-    // Mock delay (3 sec)
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    const text = `
+Name: ${formData.name}
+Email: ${formData.email}
 
-    // Save data in localStorage
-    const oldMessages = JSON.parse(localStorage.getItem("messages") || "[]");
+Message:
+${formData.message}
+  `;
 
-    localStorage.setItem(
-      "messages",
-      JSON.stringify([...oldMessages, formData]),
-    );
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      text,
+    )}`;
 
-    // Success Message
+    window.open(whatsappUrl, "_blank");
 
-    // Stop Loading
-    toast.success(`Message sent successfully 🚀 I will contact you soon `);
+    toast.success("Redirecting to WhatsApp...");
+
     setIsSubmitting(false);
 
-    // Reset Form
     setFormData({
       name: "",
       email: "",
