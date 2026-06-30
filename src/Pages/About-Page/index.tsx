@@ -24,8 +24,8 @@ const About: React.FC = () => {
   const stats = [
     {
       icon: <Briefcase className="w-5 h-5 text-blue-400" />,
-      value: "1+",
-      label: "Years Experience",
+      value: "3+",
+      label: "months Experience",
     },
     {
       icon: <Award className="w-5 h-5 text-purple-400" />,
@@ -146,7 +146,7 @@ const About: React.FC = () => {
             </h3>
 
             <p className="text-slate-400 leading-relaxed text-base md:text-lg">
-              I am a passionate Front-End Developer with over 1 year of
+              I am a passionate Front-End Developer with over 3 months of
               professional experience architecture-building scalable, highly
               interactive, and visually stunning web applications. My structural
               expertise centers around modern robust toolsets like
